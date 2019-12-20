@@ -2,6 +2,6 @@ CPUCHECK_STRING="Qualcomm Technologies, Inc SDM730"
 
 PART_1="boot"
 
-PART_REAL_1="mmcblk0p21"
+PART_REAL_1="sde48"
 
 PART_I="1" 
