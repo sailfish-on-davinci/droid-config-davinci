@@ -16,6 +16,7 @@ Requires:
 
 # For multi-SIM devices
 - jolla-settings-networking-multisim
+- jolla-settings-system-nfc
 
 # Introduced starting Sailfish OS 2.0.4.x:
 # 3rd party accounts like Twitter, VK, cloud services, etc
