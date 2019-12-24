@@ -95,9 +95,6 @@ Requires:
 # For torch
 - jolla-settings-system-flashlight
 
-# Additional packages
-- sd-utils
-
 # For suspend to work with enabled Wi-Fi on newer Qualcomm devices
 - sailfish-connman-plugin-suspend
 
