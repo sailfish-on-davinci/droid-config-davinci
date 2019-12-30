@@ -3,7 +3,7 @@
 %define device davinci
 %define vendor xiaomi
 %define vendor_pretty Xiaomi
-%define device_pretty Redmi K20 (davinci)
+%define device_pretty Redmi K20
 %define dcd_path ./
 # Adjust this for your device
 %define pixel_ratio 1.5
