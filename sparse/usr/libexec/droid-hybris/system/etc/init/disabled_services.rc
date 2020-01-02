@@ -10,9 +10,6 @@ service cameraserver cameraserver_HYBRIS_DISABLED
 service installd installd_HYBRIS_DISABLED
     disabled
     override
-service vendor.keymaster-3-0 keymaster_HYBRIS_DISABLED
-    disabled
-    override
 service keystore keystore_HYBRIS_DISABLED
     disabled
     override
@@ -62,5 +59,11 @@ service vold vold_HYBRIS_DISABLED
     disabled
     override
 service wificond wificond_HYBRIS_DISABLED
+    disabled
+    override
+service gatekeeperd gatekeeperd_HYBRIS_DISABLED
+    disabled
+    override
+service vendor.ipacm vendor_ipacm_HYBRIS_DISABLED
     disabled
     override
