@@ -82,6 +82,6 @@ service vendor.tlocd tlocd_HYBRIS_DISABLED
 service qvrd qvrd_HYBRIS_DISABLED
     disabled
     override
-#service vendor.dataqti /system/vendor/bin/qti_HYBRIS_DISABLED
-#    disabled
-#    override
+service vendor.dataqti /system/vendor/bin/qti_HYBRIS_DISABLED
+    disabled
+    override
