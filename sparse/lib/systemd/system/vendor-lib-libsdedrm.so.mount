@@ -4,7 +4,7 @@ Before=local-fs.target
 After=vendor.mount
 
 [Mount]
-What=/usr/libexec/droid-hybris/vendor/lib/libsdedrm.so
+What=/usr/libexec/droid-hybris/system/lib/libsdedrm.so
 Where=/vendor/lib/libsdedrm.so
 Type=none
 Options=ro,bind
