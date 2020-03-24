@@ -1,0 +1,14 @@
+[Unit]
+Description=Droid mount for /vendor/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini
+Before=local-fs.target wlan-module-load.service
+After=vendor.mount
+
+[Mount]
+What=/usr/libexec/droid-hybris/vendor/etc/wifi/WCNSS_qcom_cfg.ini
+Where=/vendor/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini
+Type=none
+Options=ro,bind
+TimeoutSec=5
+
+[Install]
+WantedBy=local-fs.target
