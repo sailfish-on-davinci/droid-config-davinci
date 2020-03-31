@@ -98,4 +98,7 @@ Requires:
 # For suspend to work with enabled Wi-Fi on newer Qualcomm devices
 - sailfish-connman-plugin-suspend
 
+# For cellurdata
+- dummy_netd
+
 Summary: Jolla HW Adaptation davinci
