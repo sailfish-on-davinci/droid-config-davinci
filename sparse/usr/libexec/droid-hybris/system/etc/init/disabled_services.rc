@@ -61,27 +61,27 @@ service gatekeeperd gatekeeperd_HYBRIS_DISABLED
 service vendor.ipacm vendor_ipacm_HYBRIS_DISABLED
     disabled
     override
-service vendor.imsdatadaemon imsdatadaemon_HYBRIS_DISABLED
-    disabled
-    override
-service vendor.imsrcsservice imsrcsservice_HYBRIS_DISABLED
-    disabled
-    override
-service vendor.ims_rtp_daemon ims_rtp_daemon_HYBRIS_DISABLED
-    disabled
-    override
-service vendor.ss_ramdump ss_ramdump_HYBRIS_DISABLED
-    disabled
-    override
-service vendor.qdmastatsd qdmastatsd_HYBRIS_DISABLED
-    disabled
-    override
-service vendor.tlocd tlocd_HYBRIS_DISABLED
-    disabled
-    override
-service qvrd qvrd_HYBRIS_DISABLED
-    disabled
-    override
+#service vendor.imsdatadaemon imsdatadaemon_HYBRIS_DISABLED
+#    disabled
+#    override
+#service vendor.imsrcsservice imsrcsservice_HYBRIS_DISABLED
+#    disabled
+#    override
+#service vendor.ims_rtp_daemon ims_rtp_daemon_HYBRIS_DISABLED
+#    disabled
+#    override
+#service vendor.ss_ramdump ss_ramdump_HYBRIS_DISABLED
+#    disabled
+#    override
+#service vendor.qdmastatsd qdmastatsd_HYBRIS_DISABLED
+#    disabled
+#    override
+#service vendor.tlocd tlocd_HYBRIS_DISABLED
+#    disabled
+#    override
+#service qvrd qvrd_HYBRIS_DISABLED
+#    disabled
+#    override
 service vendor.dataqti /system/vendor/bin/qti_HYBRIS_DISABLED
     disabled
     override
