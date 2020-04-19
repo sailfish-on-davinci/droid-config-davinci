@@ -41,7 +41,7 @@ Requires:
 # Needed for /dev/touchscreen symlink
 - qt5-plugin-generic-evdev
 
-- audiosystem-passthrough
+- audioflingerglue
 - pulseaudio-modules-droid
 - pulseaudio-modules-droid-hidl
 
