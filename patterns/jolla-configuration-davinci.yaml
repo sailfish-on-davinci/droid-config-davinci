@@ -9,8 +9,6 @@ Requires:
 - patterns-sailfish-ui
 # For devices with cellular modem. Those without one, please comment out:
 - patterns-sailfish-cellular-apps
-# Early stages of porting benefit from these:
-- pattern:sailfish-porter-tools
 
 - sailfish-content-graphics-z@ICON_RES@
 
@@ -46,5 +44,23 @@ Requires:
 - jolla-mediaplayer
 - jolla-calendar
 - sailfish-weather
+
+# Early stages of porting benefit from these:
+Requires: patterns-sailfish-rnd
+# dev-tools pattern will be fixed in the next release
+# for now we'll use its 'exploded' version:
+#Requires: patterns-sailfish-dev-tools
+Recommends: jolla-developer-mode
+Requires: strace
+Requires: gdb
+Requires: gdb-gdbserver
+Requires: vim-enhanced
+Requires: less
+Requires: valgrind
+Requires: lipstick-qt5-tools
+Requires: libhybris-tests
+Requires: busybox-static
+Requires: openssh-server
+Requires: zypper
 
 Summary: Jolla Configuration davinci
