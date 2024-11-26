@@ -9,6 +9,7 @@
 %define pixel_ratio 1.5
 # We assume most devices will
 %define have_modem 1
+%define android_version_major 9
 
 # Device-specific usb-moded configuration
 Provides: usb-moded-configs
@@ -18,6 +19,8 @@ Provides: ofono-configs
 Obsoletes: ofono-configs-mer
 
 Obsoletes: qt5-qpa-surfaceflinger-plugin
+# without this, browser and video playback are happy
+Obsoletes: gecko-camera-droid-plugin
 
 # Community HW adaptations need this
 %define community_adaptation 1
