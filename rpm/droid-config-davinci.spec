@@ -16,6 +16,7 @@ Provides: usb-moded-configs
 
 # Device-specific ofono configuration
 Provides: ofono-configs
+Obsoletes: ofono-configs-binder
 Obsoletes: ofono-configs-mer
 
 Obsoletes: qt5-qpa-surfaceflinger-plugin
