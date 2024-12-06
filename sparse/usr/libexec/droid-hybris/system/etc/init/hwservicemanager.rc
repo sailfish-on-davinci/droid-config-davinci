@@ -1,4 +1,4 @@
-# hybris overwrite for hwservicemanager
+# Hybris override for hwservicemanager
 
 service hwservicemanager /system/bin/hwservicemanager
     setenv LD_PRELOAD /usr/libexec/droid-hybris/system/lib64/libselinux_stubs.so
@@ -13,3 +13,4 @@ service hwservicemanager /system/bin/hwservicemanager
     class animation
     shutdown critical
     override
+
