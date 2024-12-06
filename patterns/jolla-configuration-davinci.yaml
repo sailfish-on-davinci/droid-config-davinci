@@ -1,6 +1,0 @@
-Description: Pattern with packages for davinci configurations
-Name: jolla-configuration-davinci
-Requires:
-- patterns-sailfish-device-configuration-davinci
-
-Summary: Jolla Configuration davinci

@@ -67,6 +67,9 @@ Requires: geoclue-provider-hybris
 Requires: qt5-qtmultimedia-plugin-mediaservice-irisradio
 Requires: jolla-mediaplayer-radio
 
+# For torch
+Requires: jolla-settings-system-flashlight
+
 # For suspend to work with enabled Wi-Fi on newer Qualcomm devices
 Requires: sailfish-connman-plugin-suspend
 
