@@ -9,6 +9,7 @@ Requires: droid-hal-davinci-detritus
 Requires: libhybris-libEGL
 Requires: libhybris-libGLESv2
 Requires: libhybris-libwayland-egl
+Recommends: libhybris-tests
 
 # Bluetooth
 Requires: bluebinder
