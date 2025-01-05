@@ -66,6 +66,7 @@ Requires: sailfish-fpd-community
 Requires: sailfish-devicelock-fpd
 Requires: droid-fake-crypt
 Requires: droid-biometry-fp
+Requires: sailfish-devicelock-fpd
 
 # For GPS
 Requires: geoclue-provider-hybris
