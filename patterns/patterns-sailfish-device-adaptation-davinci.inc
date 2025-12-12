@@ -59,14 +59,14 @@ Requires: usb-moded
 Requires: rfkill
 
 # enable device lock and allow to select untrusted software
-#Requires: jolla-devicelock-daemon-encsfa
+Requires: jolla-devicelock-daemon-encsfa
 
-#Add FP support
-Requires: sailfish-fpd-community
-Requires: sailfish-devicelock-fpd
-Requires: droid-fake-crypt
-Requires: droid-biometry-fp
-Requires: sailfish-devicelock-fpd
+#Add FP support -- not working, disable now
+#Requires: sailfish-fpd-community
+#Requires: sailfish-devicelock-fpd
+#Requires: droid-fake-crypt
+#Requires: droid-biometry-fp
+#Requires: sailfish-devicelock-fpd
 
 # For GPS
 Requires: geoclue-provider-hybris
