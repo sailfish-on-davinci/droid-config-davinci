@@ -1,0 +1,53 @@
+#!/bin/sh
+# Provision WLAN MAC + unblock rfkill, in the right order, so that wlan0
+# appears at boot. On davinci (qcom sm6150) the cnss/icnss driver only
+# completes probe and exposes wlan0 if a valid MAC is in its debugfs entry
+# at probe time — and the kernel module wlan.ko, loaded by upstream's
+# wlan-module-load.service, won't retry probe on its own.
+#
+# Sequence:
+#   1. rfkill unblock — kernel boots with the WiFi rfkill softblocked.
+#   2. Read MAC from /persist/wlan_mac.bin (per-device, set by Qualcomm
+#      provisioning; format is `Intf0MacAddress=AABBCCDDEEFF`).
+#   3. Write `provisioned 0xAABBCCDDEEFF` to cnss_utils debugfs (format
+#      enforced by drivers/net/wireless/cnss_utils/cnss_utils.c).
+#   4. If wlan.ko is already loaded (because wlan-module-load.service ran
+#      before us — race we can't always avoid), unload+reload it so probe
+#      fires with the MAC now in place.
+
+set -u
+
+rfkill unblock all 2>/dev/null || true
+
+MAC_FILE=/persist/wlan_mac.bin
+DEBUGFS=/sys/kernel/debug/cnss_utils/mac_address
+
+if [ ! -r "$MAC_FILE" ]; then
+    exit 0
+fi
+
+mac=$(awk -F= '/Intf0MacAddress/{
+    gsub(/[\r\n[:space:]]/, "", $2)
+    print tolower($2)
+    exit
+}' "$MAC_FILE")
+
+if [ -z "$mac" ]; then
+    exit 0
+fi
+
+i=0
+while [ ! -e "$DEBUGFS" ] && [ $i -lt 30 ]; do
+    sleep 1
+    i=$((i + 1))
+done
+[ -e "$DEBUGFS" ] || exit 0
+
+# Already-provisioned writes return EINVAL; harmless.
+printf 'provisioned 0x%s\n' "$mac" > "$DEBUGFS" 2>/dev/null || true
+
+# If wlan.ko already loaded but wlan0 absent, force re-probe.
+if lsmod | grep -q '^wlan ' && ! ip link show wlan0 >/dev/null 2>&1; then
+    rmmod wlan 2>/dev/null
+    modprobe wlan 2>/dev/null
+fi
