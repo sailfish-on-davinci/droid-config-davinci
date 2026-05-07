@@ -1,0 +1,12 @@
+[Unit]
+Description=Provision WLAN MAC, unblock rfkill, ensure wlan0 is up
+Before=connman.service wpa_supplicant.service
+After=local-fs.target wlan-module-load.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/sbin/wlan-bringup
+
+[Install]
+WantedBy=multi-user.target
