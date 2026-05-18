@@ -1,3 +1,3 @@
 #!/bin/bash
-echo -1000 > /proc/self/oom_score_adj
-echo "pass"
+echo none > /sys/devices/platform/soc/a600000.ssusb/mode
+
