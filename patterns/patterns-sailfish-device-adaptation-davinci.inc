@@ -4,6 +4,13 @@ Requires: droid-hal-davinci
 Requires: droid-hal-davinci-img-boot
 Requires: droid-hal-davinci-kernel-modules
 Requires: droid-hal-davinci-detritus
+Requires: droid-config-davinci-sailfish
+Requires: droid-config-davinci-pulseaudio-settings
+Requires: droid-config-davinci-policy-settings
+Requires: droid-config-davinci-preinit-plugin
+Requires: droid-config-davinci-flashing
+Requires: droid-config-davinci-bluez5
+Requires: droid-hal-version-davinci
 
 # Hybris packages
 Requires: libhybris-libEGL
