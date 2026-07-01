@@ -22,7 +22,8 @@ Recommends: libhybris-tests
 Requires: bluebinder
 
 # Telephony
-Requires: ofono-ril-binder-plugin
+Requires: ofono-binder-plugin
+Requires: ofono-binder-plugin-ext-qti
 Requires: dummy_netd
 
 # NFC
